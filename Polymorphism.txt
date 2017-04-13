@@ -1,0 +1,35 @@
+					"Polymorphism (Banyak Bentuk)"
+
+Polymorphism yaitu suatu aksi yang memungkinkan pemrograman menyampaikan pesan tertentu keluar dari Hirarki Objeknya,
+dimana objek yang berbeda memberikan tanggapan/respon terhadap pesan yang sama sesuai dengan sifat masing-masing Objeknya.
+Polymorphism sendiri dapat disamakan dengan Overloading, dimana di dalam sebuah class terdapat beberapa Method dengan nama 
+yang sama.
+
+"Program Polymorphism"
+
+class CetakDataTipe { //class yang di pakai adalah CetakDataTipe
+	
+	//membuat method dengan nama sama tapi beda tipe datanya.
+	
+	public void CetakData(String Cetak){ // method dengan tipe data String
+		System.out.println(Cetak); // untuk menampilkan hasil dari Polymorphism data.CetakData "Jawa Barat"
+	}
+	
+	public void CetakData(int Cetak){ // method dengan tipe data Integer
+		System.out.println(Cetak); // untuk menampilkan hasil dari Polymorphism data.CetakData yang bertipe integer "1998"
+	}
+}
+
+public class Polymorphism{ //class yang di pakai adalah Polymorphism untuk menggabungkan file CetakDataTipe.java.
+	
+	public static void main(String[] args){ // untuk menjalankan program java.
+		CetakDataTipe data = new CetakDataTipe(); // Class CetakDataTipe dan Objectnya.
+		
+		System.out.print("Cetak Data Tipe String  :"); // untuk menampilkan hasil pertanyaan tipe string.
+		data.CetakData("Jawa Barat"); // untuk menghubungkan hasil pengeluaran dari file CetakDataTipe.java, System.out.println(Cetak); tipe string.
+		
+		System.out.print("Cetak Data Tipe Integer :"); // untuk menampilkan hasil pertanyaan tipe integer.
+		data.CetakData(1998); // untuk menghubungkan hasil pengeluaran dari file CetakDataTipe.java System.out.println(Cetak); tipe integer.
+		
+	}
+}
